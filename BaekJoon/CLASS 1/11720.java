@@ -20,7 +20,6 @@ public class Main {
 		
 		br.close();
 		System.exit(0);
-
 	}
 }
 // 11720 end
