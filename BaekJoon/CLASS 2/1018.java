@@ -54,7 +54,6 @@ public class Main {
 		
 		br.close();
 		System.exit(0);
-
 	}
 }
 // 1018 end
