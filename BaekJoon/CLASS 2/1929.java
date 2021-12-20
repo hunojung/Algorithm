@@ -26,6 +26,7 @@ public class Main {
 					}
 				}
 			
+			// 1 제외 안했더니 오답 발생
 			if(sosu && M!=1)System.out.println(M);
 			M++;
 		}
