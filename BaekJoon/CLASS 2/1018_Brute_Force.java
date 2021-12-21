@@ -1,3 +1,4 @@
+// 체스판 다시 칠하기
 // 1018
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
