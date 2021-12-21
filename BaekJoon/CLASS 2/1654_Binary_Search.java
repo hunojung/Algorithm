@@ -1,3 +1,4 @@
+// 랜선 자르기
 // 1654
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
