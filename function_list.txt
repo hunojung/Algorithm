@@ -1,0 +1,42 @@
+### 리스트 돌리기 
+from copy import deepcopy
+def rotate(board):
+    # tmp = deepcopy(board)
+    n = len(board)
+    m = len(board[0])
+    tmp = [[0 for _ in range(n)] for _ in range(m)]
+    for i in range(n):
+        for j in range(m):
+            tmp[j][n-i-1] = board[i][j]
+    return tmp
+
+### 진법
+def notation(n, base):
+  s = "0123456789ABCDEF"
+  q, r = divmod(n, base)
+  return s[r] if q==0 else notation(q, base) + s[r]
+    # tmp = deepcopy(board)
+    n = len(board)
+    m = len(board[0])
+    tmp = [[0 for _ in range(n)] for _ in range(m)]
+    for i in range(n):
+        for j in range(m):
+            tmp[j][n-i-1] = board[i][j]
+    return tmp
+gcd(최대공약수)
+return n
+gcd(최대공약수)
+
+### 유클리드 호제법
+def gcd(n, m):
+  if n > m,
+  while m>0:
+    n, m = m, n%m
+return n
+
+def gcd(n, m):
+  return n if m == 0 else gcd(m, n%m)
+gcd(n, m) if n>m else gcd(m, n)
+- 최소공배수
+lcm(최소공배수) = n * m // gcd(최대공약수)
+
