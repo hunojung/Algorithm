@@ -30,13 +30,13 @@ public class Main {
 		
 		// block = avg 높이가 되는데 필요한 블럭 수
 		// time
-		int time = 0;
 		int before_time=0;
     
-    // max 부터 시작해서 1개씩 내려간다
-    // 시간이 줄어들다가 늘어나는 시점에 break
+		// max 부터 시작해서 1개씩 내려간다
+		// 시간이 줄어들다가 늘어나는 시점에 break
 		while(true){
 			int block = first_block;
+			int time = 0;
 			
 			for (int i = 0; i < x; i++) {
 				for (int j = 0; j < y; j++) {
@@ -54,9 +54,7 @@ public class Main {
 			}
 			//System.out.println("time:"+time+"/ b_time:"+before_time+"/ 기준:"+max+"/ block:"+block);
 			if(block < 0){
-				block = first_block;
 				max --;
-				time = 0;
 			}else{
 				if(time == 0){
 					System.out.println(time+" "+max);
@@ -67,14 +65,14 @@ public class Main {
 					System.out.println(before_time+" "+(max+1));
 					System.exit(0);
 				}
+				// block이 남는 순간부터 before_time에 넣고 비교시작
 				before_time = time;
-				block = first_block;
 				max--;
-				time=0;
 			}
 		}
 		
-		
+
+// 참고한 반례
 //		1 3 0
 //		1 4 1
 //		답 : 6 2
