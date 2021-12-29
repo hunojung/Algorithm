@@ -60,7 +60,7 @@ public class Main {
 		minRange/=10;
 		
 		//System.out.println(num+" "+maxRange+" "+minRange);
-		
+		if(maxRange>1000000)maxRange=1000000;
 		for (int i = minRange ; i < maxRange+1; i++) {
 			
 			// broken이 숫자에 포함되었나
