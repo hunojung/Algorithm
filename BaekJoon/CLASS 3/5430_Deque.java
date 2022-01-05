@@ -7,10 +7,6 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Main {
-	public static int countChar(String str, char ch) {
-		return str.length() - str.replace(String.valueOf(ch), "").length();
-	}
-  
 	public static void main(String[] args) throws Exception {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
