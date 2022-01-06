@@ -40,3 +40,5 @@ gcd(n, m) if n>m else gcd(m, n)
 - 최소공배수
 lcm(최소공배수) = n * m // gcd(최대공약수)
 
+### 맵에서 중복된 값은 value를 증가시킨다
+TreeMap.put(number,tm.getOrDefault(number, 0) + 1);
