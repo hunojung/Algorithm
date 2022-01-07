@@ -1,4 +1,105 @@
 // DSLR
+
+// 시간 1/3 만든 코드
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main {	
+	static boolean[] ok; 
+	public static void main(String[] args) throws Exception {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		// 값 입력
+		int testcase = Integer.parseInt(br.readLine());
+		StringBuilder sb = new StringBuilder();
+		
+		while(testcase-->0){
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			
+			// 새로운 testcase 마다 리셋
+			ok = new boolean[10000];
+			int A = Integer.parseInt(st.nextToken());		
+			int B = Integer.parseInt(st.nextToken());
+			
+			sb.append(bfs(A,B)).append("\n");
+		}
+		
+		System.out.println(sb);
+		
+		br.close();
+		System.exit(0);
+	}
+	
+	static class DSLR {
+		int num;
+		String order;
+		
+		public DSLR(int num, String order) {
+			super();
+			this.num = num;
+			this.order = order;
+		}
+		
+		int D(){
+			return (num*2)%10000;
+		}
+		
+		int S(){
+			return num>0?num-1:9999;
+		}
+		
+		int L(){
+			return (num%1000)*10+num/1000;
+		}
+		
+		int R(){
+			return (num%10)*1000+num/10;
+		}
+	}
+	
+	public static String bfs(int A , int B){
+		
+		Queue<DSLR> q = new LinkedList<>();
+		String ans="";
+		q.add(new DSLR(A,""));
+		
+		ok[A]=true;
+		
+		while(!q.isEmpty()){
+			
+			DSLR next = q.poll();
+			
+			if(next.num==B){
+				ans = next.order;
+				break;
+				
+			}
+
+			if(!ok[next.D()]){
+				q.add(new DSLR(next.D(),next.order+"D"));
+				ok[next.D()]=true;
+			}
+			if(!ok[next.S()]){
+				q.add(new DSLR(next.S(),next.order+"S"));
+				ok[next.S()]=true;
+			}
+			if(!ok[next.L()]){
+				q.add(new DSLR(next.L(),next.order+"L"));
+				ok[next.L()]=true;
+			}
+			if(!ok[next.R()]){
+				q.add(new DSLR(next.R(),next.order+"R"));
+				ok[next.R()]=true;
+			}
+		}
+		return ans;
+	}
+}
+// END
 // 9019
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
