@@ -1,5 +1,5 @@
 ### 리스트 돌리기 
-from copy import deepcopy
+from copy import deepcopy 
 def rotate(board):
     # tmp = deepcopy(board)
     n = len(board)
