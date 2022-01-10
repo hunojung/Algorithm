@@ -1,4 +1,6 @@
 // 좌표 압축
+// 여기 쩐다
+// https://www.acmicpc.net/source/36278481
 // 시간초과 오답
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
