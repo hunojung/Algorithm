@@ -42,3 +42,32 @@ lcm(최소공배수) = n * m // gcd(최대공약수)
 
 ### 맵에서 중복된 값은 value를 증가시킨다
 TreeMap.put(number,tm.getOrDefault(number, 0) + 1);
+
+
+### Combination N개중 R개 뽑기
+public class Main {
+	public static void main(String[] args) throws Exception {
+		
+		int[] list = {0,1,2};
+		int n = list.length;
+		int r = 2;
+		HashSet<Integer> set = new HashSet<>();
+		combination(list, n, r, 0, set);
+	}
+
+	private static void combination(int[] list, int n, int r, int index, HashSet<Integer> set) {
+		if(r==0) {
+			for(int i : set) {
+				System.out.print(i+" ");
+			}System.out.println();
+			return;
+		}
+		
+		for(int i=index; i<n; i++) {
+			set.add(i);
+			combination(list, n, r-1, i+1, set);
+			set.remove(i);
+		}
+		
+	}
+}
