@@ -52,7 +52,6 @@ class Solution {
         	}
         	p=v;
         }
-        
         return answer+answer_last;
     }
 }
