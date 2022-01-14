@@ -1,3 +1,5 @@
+// https://programmers.co.kr/learn/courses/30/lessons/42885
+// 구명보트
 import java.util.*;
 
 public class Solution{
