@@ -1,3 +1,4 @@
+ // https://programmers.co.kr/learn/courses/30/lessons/49189
 // 가장 먼 노드
 import java.util.ArrayList;
 import java.util.LinkedList;
