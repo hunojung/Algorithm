@@ -35,7 +35,6 @@ public class Main{
 		if(P>=(A+B)){
 			answer = "Yes";
 		}
-		
 		System.out.println(answer);
 	}
 }
