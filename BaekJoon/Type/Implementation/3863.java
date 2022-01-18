@@ -4,6 +4,8 @@
 // 분류
 // 구현
 // 많은 조건 분기
+package algorithm;
+
 import java.io.*;
 import java.util.*;
 
@@ -49,8 +51,8 @@ public class Main{
 				for (int j = 0; j < N; j++) {
 					//System.out.println(i+" "+j);
 					
-					if((call[j][0]>police[i][0] && call[j][0]<police[i][1])
-							|| (call[j][1]>police[i][0] && call[j][0]<police[i][1])){
+					//전화 끝>경찰 시작 && 전화 시작<경찰 끝
+					if((call[j][1]>police[i][0] && call[j][0]<police[i][1])){
 						answer++;
 					}
 				}
