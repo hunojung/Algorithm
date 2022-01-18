@@ -47,7 +47,6 @@ public class Main{
          }
     
          System.out.println(String.format("%.3f %.3f",x,y));
-         
       }
       br.close();
       System.exit(0);
