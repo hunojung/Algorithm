@@ -1,3 +1,21 @@
+## 콤비네이션 - 연구소 3 문제에서 썼음
+static void dfs(int depth, int start){
+	if(depth == M){
+		bfs();
+		return;
+	}else{
+
+		for (int i = start; i < arr.size(); i++) {
+			Point p = arr.get(i);
+
+			map[p.x][p.y] = 3;
+			dfs(depth+1,i+1);
+			map[p.x][p.y] = 2;
+		}
+	}
+}
+
+
 ### 리스트 돌리기 
 from copy import deepcopy 
 def rotate(board):
