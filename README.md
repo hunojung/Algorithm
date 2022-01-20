@@ -5,5 +5,5 @@
   * [Type](./BaekJoon/Type)
     * [Math](./BaekJoon/Type/Math) / [Implementation](./BaekJoon/Type/Implementation)  / [DFS_BFS](./BaekJoon/Type/DFS_BFS) / [Back_Tracking](./BaekJoon/Type/Back_Tracking) / [Brute_Force](./BaekJoon/Type/Brute_Force)/ [DP](./BaekJoon/Type/DP) / [DataStructures](./BaekJoon/Type/DataStructures) / [Geometry](./BaekJoon/Type/Geometry) / [Greedy](./BaekJoon/Type/Greedy)/ [Ad_Hoc](./BaekJoon/Type/Ad_Hoc)
 
-* [playdata](./playdata)
+* [<b>playdata</b>](./playdata)
   * [Study_1_Step](./playdata/Study_1_Step) / [Study_2_Step](./playdata/Study_2_Step)
