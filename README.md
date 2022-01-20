@@ -1,17 +1,17 @@
 # Algorithm
 
 * [BaekJoon](./BaekJoon)
-  * [CLASS 1](./BaekJoon/CLASS 1)
+  * [Class_1](./BaekJoon/Class_1)
 
-  * [CLASS 2](./BaekJoon/CLASS 1)
+  * [Class_2](./BaekJoon/Class_2)
 
-  * [CLASS 3](./BaekJoon/CLASS 1)
+  * [Class_3](./BaekJoon/Class_3)
 
-  * [CLASS 4](./BaekJoon/CLASS 1)
+  * [Class_4](./BaekJoon/Class_4)
 
   * [Type](./BaekJoon/Type)
 
 * [playdata](./playdata)
-  * [study 1](./playdata/study 1)
+  * [Study_1_Step](./playdata/Study_1_Step)
 
-  * [study 2](./playdata/study 2)
+  * [Study_2_Step](./playdata/Study_2_Step)
