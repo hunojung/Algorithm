@@ -1,4 +1,43 @@
-## 콤비네이션 - 연구소 3 문제에서 썼음
+// 다익스트라
+	static int dijkstra (int path,int goal){
+		
+		boolean[] visit = new boolean[N+1];
+		int[] cost = new int[N+1];
+		Arrays.fill(cost, Integer.MAX_VALUE);
+		
+		// 시작할 노드를 최솟값으로 설정하고 처음에 걸리게함
+		int start = path;
+		cost[start]=0;
+		
+		// 방문 체크하면서 N번하면 모든 노드 들리게 됨
+		for (int i = 1; i < N+1; i++) {
+			
+			// 방문하지 않은 것 중 최솟값인 노드
+			int nextNodeCost = Integer.MAX_VALUE;
+			for (int j = 1; j < N+1; j++) {
+				if(!visit[j] && cost[j]<nextNodeCost){
+					nextNodeCost = cost[j];
+					start = j;
+				}
+			}
+			
+			// 노드 골랐으면 체크
+			visit[start]=true;
+			
+			for (int j = 0; j < arr[start].size(); j++) {
+				Node node = arr[start].get(j);
+				
+				if(cost[node.n]>cost[start]+node.cost){
+					cost[node.n]=cost[start]+node.cost;
+				}
+			}
+		}
+		return cost[goal];
+	}
+
+---------------------------------------------------------------------------------------------
+
+// 콤비네이션 - 연구소 3 문제에서 썼음
 static void dfs(int depth, int start){
 	if(depth == M){
 		bfs();
@@ -16,7 +55,8 @@ static void dfs(int depth, int start){
 }
 
 
-### 리스트 돌리기 
+---------------------------------------------------------------------------------------------
+// 리스트 돌리기 
 from copy import deepcopy 
 def rotate(board):
     # tmp = deepcopy(board)
@@ -28,7 +68,9 @@ def rotate(board):
             tmp[j][n-i-1] = board[i][j]
     return tmp
 
-### 진법
+
+---------------------------------------------------------------------------------------------
+// 진법
 def notation(n, base):
   s = "0123456789ABCDEF"
   q, r = divmod(n, base)
@@ -43,9 +85,10 @@ def notation(n, base):
     return tmp
 gcd(최대공약수)
 return n
-gcd(최대공약수)
-
-### 유클리드 호제법
+gcd(최대공약수)   
+		    
+---------------------------------------------------------------------------------------------
+// 유클리드 호제법
 def gcd(n, m):
   if n > m,
   while m>0:
@@ -58,11 +101,14 @@ gcd(n, m) if n>m else gcd(m, n)
 - 최소공배수
 lcm(최소공배수) = n * m // gcd(최대공약수)
 
-### 맵에서 중복된 값은 value를 증가시킨다
+
+---------------------------------------------------------------------------------------------
+// 맵에서 중복된 값은 value를 증가시킨다
 TreeMap.put(number,tm.getOrDefault(number, 0) + 1);
 
 
-### Combination N개중 R개 뽑기
+---------------------------------------------------------------------------------------------
+// Combination N개중 R개 뽑기
 public class Main {
 	public static void main(String[] args) throws Exception {
 		
@@ -91,7 +137,8 @@ public class Main {
 }
 
 
-### Java Comparator 쓴 문제!!
+---------------------------------------------------------------------------------------------
+// Java Comparator 쓴 문제!!
 import java.io.*;
 import java.util.*;
 
