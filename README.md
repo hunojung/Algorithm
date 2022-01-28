@@ -9,3 +9,7 @@ Baekjoon Profile - [Profile](https://solved.ac/profile/hunojung)
 
 * [<b>playdata</b>](./playdata)
   * [Study_1_Step](./playdata/Study_1_Step) / [Study_2_Step](./playdata/Study_2_Step)
+
+
+
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
