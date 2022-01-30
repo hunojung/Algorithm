@@ -1,4 +1,4 @@
-// https://www.acmicpc.net/submit/1238/37897885
+// https://www.acmicpc.net/problem/1238
 // 파티
 
 // 분류
