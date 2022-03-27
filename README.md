@@ -1,7 +1,7 @@
 # Algorithm
 Leetcode Profile - [Profile](https://leetcode.com/hunojung/)<br/>
 Baekjoon Profile - [Profile](https://solved.ac/profile/hunojung)
- 
+    
 * [<b>BaekJoon</b>](./BaekJoon) - 
   * [Class_1](./BaekJoon/Class_1) / [Class_2](./BaekJoon/Class_2) /  [Class_3](./BaekJoon/Class_3) / [Class_4](./BaekJoon/Class_4)
   * [Type](./BaekJoon/Type)
@@ -11,3 +11,4 @@ Baekjoon Profile - [Profile](https://solved.ac/profile/hunojung)
   * [Study_1_Step](./playdata/Study_1_Step) / [Study_2_Step](./playdata/Study_2_Step)
      
 https://leetcode.com/problems/design-add-and-search-words-data-structure/
+   .
