@@ -11,6 +11,20 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
+        ListNode dummy1 = head;
+        ListNode dummy2 = head;
+        while(dummy2!=null && dummy2.next!=null){
+            dummy1 = dummy1.next;
+            dummy2 = dummy2.next.next;
+        }
+        
+        return dummy1;
+    }
+}
+
+// first submit
+class Solution {
+    public ListNode middleNode(ListNode head) {
         int len = 0;
         ListNode dummy = head;
         while(dummy!=null){
