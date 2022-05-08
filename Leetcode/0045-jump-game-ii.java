@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/jump-game-ii/
 class Solution {
+    // Dp
     public int jump(int[] nums) {
         int[] dp = new int[nums.length];
         
@@ -10,5 +11,20 @@ class Solution {
         }
         
         return dp[nums.length-1];
+    }
+    
+    // Greedy
+    public int jump(int[] nums) {
+        int maxIdx = 0, curIdx = 0,count = 0;
+        
+        for(int i=0;i<nums.length-1;i++){
+            maxIdx = Math.max(maxIdx,i+nums[i]);
+            if(i==curIdx){
+                count++;
+                curIdx = maxIdx;
+            }
+        }
+        
+        return count;
     }
 }
