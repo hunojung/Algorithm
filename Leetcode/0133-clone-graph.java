@@ -19,6 +19,37 @@ class Node {
 }
 */
 class Solution {
+    Map<Integer,Node> map = new HashMap<>();
+        
+    public Node cloneGraph(Node node) {
+        
+        // head
+        if(node == null) return null;
+        Node head = new Node(node.val);
+        map.put(head.val,head);
+        
+        // neighbors 
+        if(node.neighbors.size()>0){
+            head.neighbors = new ArrayList<>();
+            
+            for(Node n : node.neighbors){
+                // aleady exist val
+                if(map.containsKey(n.val)){
+                    head.neighbors.add(map.get(n.val));
+                    
+                // new val
+                }else{
+                    head.neighbors.add(cloneGraph(n));
+                    
+                }
+            }
+        }
+        
+        return head;
+    }
+}
+
+class Solution {
     public Node cloneGraph(Node node) {
         if(node==null) return null;
 
