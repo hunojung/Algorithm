@@ -1,5 +1,79 @@
 // 수 정렬하기 2
 // 2751
+// 병합 정렬 적용
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Main {
+	
+    static int[] sortedArr;
+	public static void main(String[] args) throws Exception {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		
+        sortedArr = new int[N];
+        int[] arr = new int[N];
+		for (int i = 0; i < N; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
+		}
+		
+        mergeSort(arr,0,N-1);
+		StringBuilder sb = new StringBuilder();
+        for(int i=0;i<N;i++){
+            sb.append(arr[i]).append("\n");
+        }
+        System.out.println(sb);
+
+		br.close();
+		System.exit(0);
+	}
+    
+    static void mergeSort(int[] arr , int start , int end){
+        
+        if(start<end){
+            int mid = (start+end)/2;
+            mergeSort(arr, start, mid);
+            mergeSort(arr, mid+1, end);
+            arrSort(arr, start, mid, end);
+        }
+    }
+    
+    static void arrSort(int[] arr , int start, int mid, int end){
+        int idx = start;
+        int idx1 = start;
+        int idx2 = mid+1;
+        while(idx1 <= mid && idx2 <= end){
+            if(arr[idx1] > arr[idx2]){
+                sortedArr[idx] = arr[idx2];
+                idx2++;
+            }else{
+                sortedArr[idx] = arr[idx1];
+                idx1++;
+            }
+            idx++;
+        }
+        
+        while(idx1<=mid){
+            sortedArr[idx] = arr[idx1];
+            idx++;
+            idx1++;
+        }
+        
+        while(idx2<=end){
+            sortedArr[idx] = arr[idx2];
+            idx++;
+            idx2++;
+        }
+        
+        for(int i= start;i<=end;i++){
+            arr[i] = sortedArr[i];
+        }
+    }
+}
+
+
+// 이전 제출
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
