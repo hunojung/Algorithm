@@ -1,3 +1,26 @@
+// 두번째 풀이
+import java.util.*;
+class Solution {
+    public String solution(String number, int k) {
+        StringBuilder sb = new StringBuilder();
+        Deque<Character> dq = new ArrayDeque<>();
+        int answer_len = number.length()-k;
+        for(char c : number.toCharArray()){
+            while(!dq.isEmpty() && dq.peekLast() < c && k>0){
+                dq.pollLast();
+                k--;
+            }
+            dq.addLast(c);
+        }
+        while(answer_len>0){
+            sb.append(dq.pollFirst());
+            answer_len--;
+        } 
+        
+        return sb.toString();
+    }
+}
+
 // 첫 풀이
 import java.util.*;
 class Solution {
